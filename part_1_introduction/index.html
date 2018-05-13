@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>part-1</title>
+</head>
+<body>
+    <div id="wrapper" style="max-width: 900px; margin: 0 auto;">
+        <h1 style="text-align: center">Directives</h1>
+        <div class="example-1">
+            <h2>Example 1</h2>
+            <div id="app">
+                {{ message }}
+            </div>
+            <div class="section">
+                {{ message }}
+            </div>
+            <div class="section">
+                {{ message }}
+            </div>
+        </div>
+        <div class="example-2">
+            <h2>Example 2 (v-bind)</h2>
+            <div id="app-2">
+              <span v-bind:title="message">
+                Наведи курсор на меня пару секунд,
+                чтобы увидеть динамически связанное значение title!
+              </span>
+            </div>
+        </div>
+        <div class="example-3">
+            <h2>Example 3 (v-if)</h2>
+            <div id="app-3">
+                <span v-if="seen">Сейчас меня видно</span>
+            </div>
+        </div>
+        <div class="example-4">
+            <h2>Example 4 (v-for)</h2>
+            <div id="app-4">
+                <ol>
+                    <li v-for="todo in todos">
+                        {{ todo.text }}
+                    </li>
+                </ol>
+            </div>
+            <blockquote>В консоли введите app4.todos.push({ text: 'Новый элемент' }). Вы увидите, что к списку добавился новый элемент.</blockquote>
+        </div>
+        <div class="example-5">
+            <h2>Example 5 (v-on)</h2>
+            <div id="app-5">
+                <p>{{ message }}</p>
+                <button v-on:click="reverseMessage">Перевернуть сообщение</button>
+            </div>
+        </div>
+        <div class="example-6">
+            <h2>Example 6 (v-model)</h2>
+            <div id="app-6">
+                <p>{{ message }}</p>
+                <input v-model="message">
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="script/script.js"></script>
+
+</html>
